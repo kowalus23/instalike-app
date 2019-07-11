@@ -1,11 +1,31 @@
 import React from 'react';
 import Title from "./Title";
+import PhotoWall from "./PhotoWall";
 
-class Main extends React.Component{
+const posts = [
+  {
+    id: '0',
+    description: 'beautiful landscape',
+    imageLink: "https://via.placeholder.com/150"
+  },
+  {
+    id: '1',
+    description: 'Aliens???',
+    imageLink: 'https://via.placeholder.com/150'
+  },
+  {
+    id: '2',
+    description: 'On a vacation!',
+    imageLink: 'https://via.placeholder.com/150'
+  }
+];
+
+class Main extends React.Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <Title title="Delaygram"/>
+        <PhotoWall posts={posts}/>
       </div>
     );
   }
