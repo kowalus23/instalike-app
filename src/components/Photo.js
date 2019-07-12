@@ -1,8 +1,6 @@
 import React from 'react';
 
-class Photo extends React.Component {
-  render() {
-    const post = this.props.post;
+const Photo = ({post}) => {
     return (
       <div className="card mx-3 mb-4">
         <img className="card-img-top" src={post.imageLink} alt="ownPicture"/>
@@ -12,7 +10,6 @@ class Photo extends React.Component {
           </div>
       </div>
     );
-  }
-}
+};
 
 export default Photo

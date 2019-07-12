@@ -21,11 +21,20 @@ const posts = [
 ];
 
 class Main extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      post: posts,
+    }
+  }
+
+
   render() {
     return (
       <div className="container">
         <Title title="Delaygram"/>
-        <PhotoWall posts={posts}/>
+        <PhotoWall posts={this.state.post}/>
       </div>
     );
   }

@@ -1,13 +1,7 @@
 import React from 'react';
 
-class Title extends React.Component{
-  render() {
-    return (
-      <React.Fragment>
-        <h1 className="custom py-5">{this.props.title}</h1>
-      </React.Fragment>
-    );
-  }
-}
+const Title = ({title}) => {
+  return <h1 className="custom py-5">{title}</h1>;
+};
 
 export default Title;
