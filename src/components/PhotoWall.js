@@ -9,7 +9,11 @@ const PhotoWall = ({posts, onRemovePhoto}) => {
         <Link className="btn btn-dark custom" to={'/AddPhoto'}>+</Link>
       </div>
       <div className="d-flex justify-content-center flex-wrap pt-5">
-        {posts.map((post, index) => <Photo key={index} post={post} onRemovePhoto={onRemovePhoto}/>)}
+        {
+          posts
+            .sort((x, y) => y.id - x.id)
+            .map((post, index) => <Photo key={index} post={post} onRemovePhoto={onRemovePhoto}/>)
+        }
       </div>
     </div>
   );

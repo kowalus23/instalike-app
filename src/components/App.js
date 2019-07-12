@@ -4,6 +4,7 @@ import PhotoWall from "./PhotoWall";
 import AddPhoto from "./AddPhoto";
 import './App.css'
 import { Route} from 'react-router-dom'
+import {dataPost} from '../data/posts'
 
 class App extends React.Component {
   constructor(props) {
@@ -14,7 +15,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const posts = postsKeeper();
+    const posts = dataPost();
     this.setState({
       posts: posts,
       screen: 'photos'
@@ -54,24 +55,6 @@ class App extends React.Component {
   }
 }
 
-const postsKeeper = () => {
-  return [
-    {
-      id: 1,
-      description: 'beautiful landscape',
-      imageLink: "https://via.placeholder.com/150"
-    },
-    {
-      id: 2,
-      description: 'Aliens???',
-      imageLink: 'https://via.placeholder.com/150'
-    },
-    {
-      id: 3,
-      description: 'On a vacation!',
-      imageLink: 'https://via.placeholder.com/150'
-    }
-  ]
-};
+
 
 export default App;
