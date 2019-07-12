@@ -5,9 +5,14 @@ export const removePost = (posts) => {
   }
 };
 
-export const addPost = (post) => {
+export const addPost = (id, description, imageLink) => {
   return {
     type: 'ADD_POST',
-    payload: post
+    payload: {
+      id,
+      description,
+      imageLink,
+    }
+
   };
 };

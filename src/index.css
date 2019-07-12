@@ -25,3 +25,9 @@ h1.custom {
     margin: 0;
     text-align: center;
 }
+
+@media (max-width: 450px) {
+    h1.custom {
+        font-size: 4rem;
+    }
+}

@@ -1,18 +1,16 @@
 import React from 'react';
 
-class AddPhoto extends React.Component {
+class PhotoCreate extends React.Component {
 
   onSubmit = (event) => {
     event.preventDefault();
     const imageLink = event.target.elements.link.value;
     const description = event.target.elements.description.value;
-    const post = {
-      imageLink,
-      description,
-    };
+    // temporary hardcoded ID
+    const id  = Number(new Date());
 
     if (description && imageLink) {
-      this.props.addPost(post);
+      this.props.addPost(id, description, imageLink);
       this.props.onHistory.push('/')
     }
   };
@@ -50,4 +48,4 @@ class AddPhoto extends React.Component {
   }
 }
 
-export default AddPhoto;
+export default PhotoCreate;
