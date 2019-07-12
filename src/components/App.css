@@ -1,9 +1,12 @@
 .card {
     width: 280px;
+    transition: all ease-in-out 200ms;
+
 }
 
 .card:hover {
-    box-shadow: 0 .225rem .35rem rgba(0,0,0,.075);
+    box-shadow: 0 .225rem .35rem rgba(0, 0, 0, .075);
+    border-color: #c2c2c2;
 }
 
 .btn.custom {
@@ -18,12 +21,68 @@
     align-items: center;
 }
 
+.card:hover .btn.btn-outline-danger {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn.btn-outline-danger {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease-in-out 200ms;
+    border-color: #ff4d5d;
+}
+
+.btn.btn-outline-danger:hover {
+    background-color: #ff4d5d;
+    border-color: #ff4d5d;
+}
+
 .btn.custom:hover {
-    box-shadow: 0 0.3rem 1rem rgba(0,0,0,.375);
+    box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, .375);
     border-radius: 10px;
 }
 
 .btn.custom:active {
     background-color: #4e4e4e !important;
     box-shadow: none !important;
+}
+
+.form-custom {
+    width: 400px;
+}
+
+@media (max-width: 600px) {
+    .form-custom {
+        max-width: 100%;
+    }
+}
+
+.decoration-none {
+    text-decoration: none !important;
+    color: #1b1b1b;
+}
+
+.decoration-none:hover {
+    color: #1b1b1b;
+}
+
+/*Inputs*/
+.form-custom input.form-control {
+    padding: 1.2rem 0.75rem;
+}
+
+.form-custom input.form-control::placeholder {
+    opacity: 0.6;
+}
+
+.form-custom input.form-control:focus {
+    border-color: #868686;
+    box-shadow: 0 0 0 0.2rem rgba(122, 122, 122, 0.09)
 }

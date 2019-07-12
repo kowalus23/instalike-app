@@ -1,17 +1,34 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-const Photo = (props) => {
+
+const Photo = ({post, removePost, index}) => {
+  const [hover, setHover] = useState(false);
+
+  const toggleHover = () => {
+    setHover(!hover);
+  };
+
+  const cardStyle = {
+    hover: {
+      borderColor: '#ff4d5d',
+      boxShadow: '0 0.225rem 0.35rem rgba(255, 0, 0, 0.175)'
+    }
+  };
+
+
   return (
-    <div className="card mx-3 mb-4">
-      <img className="card-img-top" src={props.post.imageLink} alt="ownPicture"/>
+    <div className="card mx-3 mb-4" style={hover ? cardStyle.hover: null}>
+      <img className="card-img-top" src={post.imageLink} alt="ownPicture"/>
       <div className="card-body">
-        <p className="card-text">{props.post.description}</p>
+        <p className="card-text">{post.description}</p>
         <button
+          onMouseEnter={toggleHover}
+          onMouseLeave={toggleHover}
           onClick={() => {
-            props.removePost(1)
+            removePost(index)
           }}
           className="btn btn-outline-danger">
-          Remove
+          X
         </button>
       </div>
     </div>
