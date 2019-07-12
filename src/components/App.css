@@ -5,3 +5,21 @@
 .card:hover {
     box-shadow: 0 .225rem .35rem rgba(0,0,0,.075);
 }
+
+.btn.custom {
+    font-size: 20px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    transition: all ease-in-out 200ms;
+}
+
+.btn.custom:hover {
+    box-shadow: 0 0.3rem 1rem rgba(0,0,0,.375);
+    border-radius: 10px;
+}
+
+.btn.custom:active {
+    background-color: #4e4e4e !important;
+    box-shadow: none !important;
+}
