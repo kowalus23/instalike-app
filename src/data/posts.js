@@ -1,5 +1,5 @@
-export const dataPost = () => {
-  return [
+export const dataPost =
+  [
     {
       id: 1,
       description: 'beautiful landscape',
@@ -15,5 +15,4 @@ export const dataPost = () => {
       description: 'On a vacation!',
       imageLink: 'https://via.placeholder.com/150'
     }
-  ]
-};
+  ];

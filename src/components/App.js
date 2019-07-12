@@ -4,36 +4,13 @@ import PhotoWall from "./PhotoWall";
 import AddPhoto from "./AddPhoto";
 import './App.css'
 import { Route} from 'react-router-dom'
-import {dataPost} from '../data/posts'
+import {connect} from "react-redux";
+import {removePost} from "../actions";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      posts: []
-    }
-  }
-
   componentDidMount() {
-    const posts = dataPost();
-    this.setState({
-      posts: posts,
-      screen: 'photos'
-    })
+    this.props.removePost();
   }
-
-  removePhoto = (postRemoved) => {
-    this.setState(state => ({
-      posts: state.posts.filter(post => post !== postRemoved)
-    }))
-
-  };
-
-  addPhoto = (postSubmited) => {
-    this.setState(state => ({
-      posts: state.posts.concat([postSubmited])
-    }) )
-  };
 
   render() {
     return (
@@ -41,7 +18,7 @@ class App extends React.Component {
         <Route path={'/'} exact render={() => (
           <React.Fragment>
             <Title title="Delaygram"/>
-            <PhotoWall posts={this.state.posts} onRemovePhoto={this.removePhoto}/>
+            <PhotoWall {...this.props}/>
           </React.Fragment>
         )}/>
         <Route path={'/AddPhoto'} exact render={({history}) => (
@@ -55,6 +32,8 @@ class App extends React.Component {
   }
 }
 
+const mapStateToProps = state => {
+  return {posts: state.posts}
+};
 
-
-export default App;
+export default connect(mapStateToProps, {removePost})(App);
