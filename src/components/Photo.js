@@ -18,7 +18,7 @@ const Photo = ({post, removePost, index}) => {
   const imagePlaceholder = 'http://www.stuartsteel.com/wp-content/themes/asenka/images/default-no-image.png';
 
   return (
-    <div className="card mx-3 mb-4" style={hover ? cardStyle.hover: null}>
+    <div className="card custom mx-3 mb-4" style={hover ? cardStyle.hover: null}>
       <div className="card-img-top border-bottom custom">
         <Link to={`photo/${post.id}`}>
           <img

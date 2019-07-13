@@ -1,10 +1,10 @@
-.card {
+.card.custom {
     width: 280px;
     transition: all ease-in-out 200ms;
 
 }
 
-.card:hover {
+.card.custom:hover {
     box-shadow: 0 .225rem .35rem rgba(0, 0, 0, .075);
     border-color: #c2c2c2;
     transform: translateY(-4px);
@@ -33,7 +33,7 @@
     align-items: center;
 }
 
-.card:hover .btn.btn-outline-danger {
+.card.custom:hover .btn.btn-outline-danger {
     opacity: 0.5;
     visibility: visible;
 }
@@ -99,4 +99,8 @@
 .form-custom input.form-control:focus {
     border-color: #868686;
     box-shadow: 0 0 0 0.2rem rgba(122, 122, 122, 0.09)
+}
+
+textarea {
+    resize: none;
 }

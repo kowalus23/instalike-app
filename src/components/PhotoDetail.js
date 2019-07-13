@@ -1,5 +1,7 @@
 import React from 'react';
-import './PhotoDetail.css'
+import '../styles/components/PhotoDetail.css'
+import Comments from "./Comments";
+
 
 const PhotoDetail = (props) => {
   const {match, posts} = props;
@@ -7,9 +9,19 @@ const PhotoDetail = (props) => {
   const post = posts.find((post) => post.id === id);
 
   return (
-    <h1>
-      Photo Detail
-    </h1>
+    <div className="row mt-4 p-3 border">
+      <div className="col-12 col-md-8 px-0">
+        <div className="card">
+          <img className="card-img-top" src={post.imageLink} alt="ownPicture"/>
+          <div className="card-body">
+            <p className="card-text">{post.description}</p>
+          </div>
+        </div>
+      </div>
+      <div className="col-12 col-md-4 pr-0">
+        <Comments/>
+      </div>
+    </div>
   )
 };
 

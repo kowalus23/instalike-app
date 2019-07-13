@@ -1,7 +1,7 @@
 import React from 'react';
 import {Route} from 'react-router-dom'
 import {connect} from "react-redux";
-import './App.css'
+import '../styles/components/App.css'
 import Title from "./Title";
 import PhotoList from "./PhotoList";
 import PhotoCreate from "./PhotoCreate";
