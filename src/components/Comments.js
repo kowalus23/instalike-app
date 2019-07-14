@@ -1,9 +1,26 @@
 import React from 'react';
 
-const Comments = () => {
+const Comments = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const comment = event.target.elements.comment.value;
+    props.addComment(comment)
+  };
+
+  const renderComment = () => {
+
+
+    return (
+      props.comments.map((comment, index) => {
+        return (
+          <li key={index} className="list-group-item d-flex justify-content-between align-items-center">
+            {comment}
+            <span className="badge badge-primary badge-pill mb-auto">now</span>
+          </li>
+        )
+      })
+    )
   };
 
   return (
@@ -15,7 +32,7 @@ const Comments = () => {
         </div>
       </form>
       <ul className="list-group custom--comments border rounded">
-        Lorem ipsum dolor sit amet.
+        {renderComment()}
         <li className="list-group-item d-flex justify-content-between align-items-center">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad, cum deserunt eum mollitia nam placeat reiciendis rem. Assumenda, dolor?
           <span className="badge badge-primary badge-pill mb-auto">yesterday</span>

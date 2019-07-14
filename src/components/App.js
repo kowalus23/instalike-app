@@ -10,7 +10,6 @@ import {removePost, addPost, addComment} from "../actions";
 
 class App extends React.Component {
   render() {
-    console.log(this.props.comments)
     return (
       <div className="container">
         <Title title="Delaygram"/>
