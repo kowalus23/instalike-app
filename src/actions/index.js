@@ -16,3 +16,10 @@ export const addPost = (id, description, imageLink) => {
 
   };
 };
+
+export const addComment = (comment) => {
+  return {
+    type: 'ADD_COMMENT',
+    payload: comment
+  };
+};

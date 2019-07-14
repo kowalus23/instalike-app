@@ -6,10 +6,11 @@ import Title from "./Title";
 import PhotoList from "./PhotoList";
 import PhotoCreate from "./PhotoCreate";
 import PhotoDetail from "./PhotoDetail";
-import {removePost, addPost} from "../actions";
+import {removePost, addPost, addComment} from "../actions";
 
 class App extends React.Component {
   render() {
+    console.log(this.props.comments)
     return (
       <div className="container">
         <Title title="Delaygram"/>
@@ -18,8 +19,8 @@ class App extends React.Component {
             <PhotoList {...this.props}/>
           </React.Fragment>
         )}/>
-        <Route path={'/create/'} exact render={({history}) => (
-          <PhotoCreate {...this.props} onHistory={history}/>
+        <Route path={'/create/'} exact render={() => (
+          <PhotoCreate {...this.props} />
         )}/>
         <Route path={'/photo/:id'} exact render={(params) => (
           <PhotoDetail {...this.props} {...params}/>
@@ -30,7 +31,7 @@ class App extends React.Component {
 }
 
 const mapStateToProps = state => {
-  return {posts: state.posts}
+  return {posts: state.posts, comments: state.comments}
 };
 
-export default connect(mapStateToProps, {removePost, addPost})(App);
+export default connect(mapStateToProps, {removePost, addPost, addComment})(App);

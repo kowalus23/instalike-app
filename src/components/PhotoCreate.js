@@ -23,7 +23,6 @@ class PhotoCreate extends React.Component {
           <div className="form-group">
             <label>Image Link</label>
             <input
-              onChange={this.onInputChange}
               name="link"
               type="text"
               className="form-control"
@@ -34,7 +33,6 @@ class PhotoCreate extends React.Component {
           <div className="form-group">
             <label>Description</label>
             <input
-              onChange={this.onInputChange}
               name="description"
               type="text"
               className="form-control"
