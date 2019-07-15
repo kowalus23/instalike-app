@@ -9,8 +9,8 @@ export const startAddingPost = (post) => async dispatch => {
   });
 };
 
-export const startLoadingPosts = () => dispatch => {
-  database.ref('posts').once('value').then((snapshot) => {
+export const startLoadingPosts = () => async dispatch => {
+  await database.ref('posts').once('value').then((snapshot) => {
     let posts = [];
     snapshot.forEach((childSnapshot) => {
       posts.push(childSnapshot.val())
@@ -40,8 +40,8 @@ export const startAddingComment = (comment, postId) => async dispatch => {
   })
 };
 
-export const startLoadingComments = () => dispatch => {
-  database.ref('comments').once('value').then((snapshot) => {
+export const startLoadingComments = () => async dispatch => {
+  await database.ref('comments').once('value').then((snapshot) => {
     let comments = {};
     snapshot.forEach((childSnapshot) => {
       comments[childSnapshot.key] = Object.values(childSnapshot.val())

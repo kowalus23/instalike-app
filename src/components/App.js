@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Link} from 'react-router-dom'
+import {Route} from 'react-router-dom'
 import {connect} from "react-redux";
 import '../styles/components/App.css'
 import Title from "./Title";
@@ -15,8 +15,12 @@ import {
 } from "../actions";
 
 class App extends React.Component {
+  state = {loading: true};
+
   componentDidMount() {
-    this.props.startLoadingPosts();
+    this.props.startLoadingPosts().then(() => {
+      this.setState({loading: false})
+    });
     this.props.startLoadingComments();
   }
 
@@ -34,8 +38,7 @@ class App extends React.Component {
         )}/>
         <Route path={'/photo/:id'} exact render={(params) => (
           <React.Fragment>
-            <Link className="return-button btn btn-primary" to={'/'}><i className="fas fa-arrow-left "/></Link>
-            <PhotoDetail {...this.props} {...params}/>
+            <PhotoDetail loading={this.state.loading} {...this.props} {...params}/>
           </React.Fragment>
         )}/>
       </div>
