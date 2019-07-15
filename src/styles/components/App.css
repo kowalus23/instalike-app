@@ -45,7 +45,7 @@
 
 .list-group.custom--comments {
     max-height: 624px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .btn.custom {
@@ -164,6 +164,7 @@ textarea {
 }
 
 .custom--card-content {
+    text-decoration: none !important;
     position: absolute;
     right: -15px;
     top: -18px;
