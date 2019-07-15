@@ -6,9 +6,13 @@ import Title from "./Title";
 import PhotoList from "./PhotoList";
 import PhotoCreate from "./PhotoCreate";
 import PhotoDetail from "./PhotoDetail";
-import {removePost, addPost, addComment} from "../actions";
+import {removePost, addPost, addComment, startAddingPost, startLoadingPost} from "../actions";
 
 class App extends React.Component {
+  componentDidMount() {
+    this.props.startLoadingPost()
+  }
+
   render() {
     return (
       <div className="container">
@@ -36,4 +40,4 @@ const mapStateToProps = state => {
   return {posts: state.posts, comments: state.comments}
 };
 
-export default connect(mapStateToProps, {removePost, addPost, addComment})(App);
+export default connect(mapStateToProps, {removePost, addPost, addComment, startAddingPost, startLoadingPost})(App);

@@ -27,6 +27,8 @@ const postReducer = (state = dataPost, action) => {
         }
         , ...state
       ];
+    case 'LOAD_POSTS':
+      return action.payload;
     default:
       return state
   }

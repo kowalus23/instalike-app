@@ -7,11 +7,15 @@ class PhotoCreate extends React.Component {
     event.preventDefault();
     const imageLink = event.target.elements.link.value;
     const description = event.target.elements.description.value;
-    // temporary hardcoded ID
-    const id  = Number(new Date());
+    const post = {
+      imageLink,
+      description,
+      // temporary hardcoded ID
+      id: Number(new Date())
+    };
 
     if (description && imageLink) {
-      this.props.addPost(id, description, imageLink);
+      this.props.startAddingPost(post);
       history.push('/')
     }
   };
