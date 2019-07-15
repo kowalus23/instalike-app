@@ -17,9 +17,13 @@ export const addPost = (id, description, imageLink) => {
   };
 };
 
-export const addComment = (comment) => {
+export const addComment = (comment, postId) => {
   return {
     type: 'ADD_COMMENT',
-    payload: comment
+    payload: {
+      comment,
+      postId
+    }
+
   };
 };

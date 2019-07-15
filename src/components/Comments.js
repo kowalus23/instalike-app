@@ -5,12 +5,10 @@ const Comments = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const comment = event.target.elements.comment.value;
-    props.addComment(comment)
+    props.addComment(comment, props.id);
   };
 
   const renderComment = () => {
-
-
     return (
       props.comments.map((comment, index) => {
         return (
@@ -20,7 +18,7 @@ const Comments = (props) => {
           </li>
         )
       })
-    )
+    );
   };
 
   return (
@@ -38,56 +36,8 @@ const Comments = (props) => {
           <span className="badge badge-primary badge-pill mb-auto">yesterday</span>
         </li>
         <li className="list-group-item d-flex justify-content-between align-items-center">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, officiis.
+          Lorem ipsum dolor sit amet, consectetur adipisicing.
           <span className="badge badge-primary badge-pill mb-auto">3 days ago</span>
-        </li>
-        <li className="list-group-item d-flex justify-content-between align-items-center">
-          Lorem ipsum dolor.
-          <span className="badge badge-primary badge-pill mb-auto">4 days ago</span>
-        </li>
-        <li className="list-group-item d-flex justify-content-between align-items-center">
-          Lorem ipsum dolor sit amet, consectetur adipisicing.
-          <span className="badge badge-primary badge-pill mb-auto">month ago</span>
-        </li>
-        <li className="list-group-item d-flex justify-content-between align-items-center">
-          Lorem ipsum dolor.
-          <span className="badge badge-primary badge-pill mb-auto">4 days ago</span>
-        </li>
-        <li className="list-group-item d-flex justify-content-between align-items-center">
-          Lorem ipsum dolor sit amet, consectetur adipisicing.
-          <span className="badge badge-primary badge-pill mb-auto">month ago</span>
-        </li>
-        <li className="list-group-item d-flex justify-content-between align-items-center">
-          Lorem ipsum dolor.
-          <span className="badge badge-primary badge-pill mb-auto">4 days ago</span>
-        </li>
-        <li className="list-group-item d-flex justify-content-between align-items-center">
-          Lorem ipsum dolor sit amet, consectetur adipisicing.
-          <span className="badge badge-primary badge-pill mb-auto">month ago</span>
-        </li>
-        <li className="list-group-item d-flex justify-content-between align-items-center">
-          Lorem ipsum dolor.
-          <span className="badge badge-primary badge-pill mb-auto">4 days ago</span>
-        </li>
-        <li className="list-group-item d-flex justify-content-between align-items-center">
-          Lorem ipsum dolor sit amet, consectetur adipisicing.
-          <span className="badge badge-primary badge-pill mb-auto">month ago</span>
-        </li>
-        <li className="list-group-item d-flex justify-content-between align-items-center">
-          Lorem ipsum dolor.
-          <span className="badge badge-primary badge-pill mb-auto">4 days ago</span>
-        </li>
-        <li className="list-group-item d-flex justify-content-between align-items-center">
-          Lorem ipsum dolor sit amet, consectetur adipisicing.
-          <span className="badge badge-primary badge-pill mb-auto">month ago</span>
-        </li>
-        <li className="list-group-item d-flex justify-content-between align-items-center">
-          Lorem ipsum dolor.
-          <span className="badge badge-primary badge-pill mb-auto">4 days ago</span>
-        </li>
-        <li className="list-group-item d-flex justify-content-between align-items-center">
-          Lorem ipsum dolor sit amet, consectetur adipisicing.
-          <span className="badge badge-primary badge-pill mb-auto">month ago</span>
         </li>
       </ul>
     </div>

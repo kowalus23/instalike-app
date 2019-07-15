@@ -1,10 +1,14 @@
 import {combineReducers} from 'redux';
 import {dataPost} from '../data/posts'
 
-const commentReducer = (state = [], action) => {
+const commentReducer = (state = {}, action) => {
   switch (action.type) {
     case 'ADD_COMMENT':
-      return [...state, action.payload];
+      if (!state[action.payload.postId]) {
+        return {...state, [action.payload.postId]: [action.payload.comment]};
+      } else {
+        return {...state, [action.payload.postId]: [action.payload.comment, ...state[action.payload.postId]]}
+      }
     default:
       return state
   }

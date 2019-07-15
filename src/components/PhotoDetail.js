@@ -6,7 +6,7 @@ const PhotoDetail = (props) => {
   const {match, posts} = props;
   const id = Number(match.params.id);
   const post = posts.find((post) => post.id === id);
-  const comments = props.comments;
+  const comments = props.comments[match.params.id] || [];
 
   return (
     <div className="row mt-4">
@@ -19,7 +19,7 @@ const PhotoDetail = (props) => {
         </div>
       </div>
       <div className="col-12 col-md-4 pr-sm-0 pr-3">
-        <Comments addComment={props.addComment} comments={comments}/>
+        <Comments addComment={props.addComment} comments={comments} id={id}/>
       </div>
     </div>
   )
