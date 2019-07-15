@@ -1,5 +1,5 @@
 import React from 'react';
-import Photo from './Photo'
+import PhotoCard from './PhotoCard'
 import {Link} from "react-router-dom";
 
 const PhotoList = (props) => {
@@ -13,7 +13,7 @@ const PhotoList = (props) => {
           props.posts
             .sort((x, y) => y.id - x.id)
             .map((post, index) =>
-              <Photo
+              <PhotoCard
                 key={index}
                 post={post}
                 {...props}

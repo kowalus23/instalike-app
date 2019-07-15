@@ -9,7 +9,7 @@ const PhotoDetail = (props) => {
   const comments = props.comments[match.params.id] || [];
 
   return (
-    <div className="row mt-4">
+    <div className="row mt-3">
       <div className="col-12 col-md-8 px-0">
         <div className="card mb-3">
           <img className="card-img-top custom--comments border-bottom" src={post.imageLink} alt="ownPicture"/>

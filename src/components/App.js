@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route} from 'react-router-dom'
+import {Route, Link} from 'react-router-dom'
 import {connect} from "react-redux";
 import '../styles/components/App.css'
 import Title from "./Title";
@@ -22,7 +22,10 @@ class App extends React.Component {
           <PhotoCreate {...this.props} />
         )}/>
         <Route path={'/photo/:id'} exact render={(params) => (
-          <PhotoDetail {...this.props} {...params}/>
+          <React.Fragment>
+            <Link className="return-button btn btn-primary" to={'/'}><i className="fas fa-arrow-left "/></Link>
+            <PhotoDetail {...this.props} {...params}/>
+          </React.Fragment>
         )}/>
       </div>
     );

@@ -6,6 +6,8 @@ const Comments = (props) => {
     event.preventDefault();
     const comment = event.target.elements.comment.value;
     props.addComment(comment, props.id);
+
+    event.target.elements.comment.value = '';
   };
 
   const renderComment = () => {
@@ -22,10 +24,10 @@ const Comments = (props) => {
   };
 
   return (
-    <div>
+    <div className="mb-3">
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <textarea className="form-control custom--comments__area" name="comment" rows="3" placeholder="Write, a comment..."/>
+          <textarea className="form-control custom--comments__area" name="comment" rows="4" placeholder="Write, a comment..."/>
           <input className="btn btn-primary w-100 custom--comments__submit" value="Add comment" type="submit"/>
         </div>
       </form>

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 
-const Photo = ({post, removePost, index}) => {
+const PhotoCard = ({post, removePost, index, comments}) => {
   const [hover, setHover] = useState(false);
 
   const toggleHover = () => {
@@ -18,7 +18,7 @@ const Photo = ({post, removePost, index}) => {
   const imagePlaceholder = 'http://www.stuartsteel.com/wp-content/themes/asenka/images/default-no-image.png';
 
   return (
-    <div className="card custom mx-3 mb-4" style={hover ? cardStyle.hover: null}>
+    <div className="card custom mx-3 mb-4" style={hover ? cardStyle.hover : null}>
       <div className="card-img-top border-bottom custom">
         <Link to={`photo/${post.id}`}>
           <img
@@ -28,11 +28,18 @@ const Photo = ({post, removePost, index}) => {
         </Link>
       </div>
       <div className="card-body">
-        <p className="card-text">{post.description}</p>
+        <div className="d-flex justify-content-between position-relative">
+          <p className="card-text mb-0">{post.description}</p>
+          <Link className="custom--card-content" to={`photo/${post.id}`}>
+              <i className="far fa-comment"/> <span>{comments[post.id] ? comments[post.id].length  : 0}</span>
+          </Link>
+        </div>
         <button
           onMouseEnter={toggleHover}
           onMouseLeave={toggleHover}
-          onClick={() => {removePost(index)}}
+          onClick={() => {
+            removePost(index)
+          }}
           className="btn btn-outline-danger">
           X
         </button>
@@ -41,4 +48,4 @@ const Photo = ({post, removePost, index}) => {
   );
 };
 
-export default Photo
+export default PhotoCard

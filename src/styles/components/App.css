@@ -26,6 +26,7 @@
     border-left: none;
     border-right: none;
 }
+
 .card-img-top.custom img.img-fluid-custom {
     width: 100%;
     height: 100%;
@@ -129,4 +130,45 @@
 
 textarea {
     resize: none;
+}
+
+.return-button {
+    height: 30px;
+    width: 50px;
+    text-decoration: none;
+    position: relative;
+    left: -15px;
+}
+
+@media (max-width: 450px) {
+    .return-button {
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+
+.return-button i {
+    position: absolute;
+    left: 10px;
+    animation: arrowMove infinite 1s alternate;
+}
+
+@keyframes arrowMove {
+    0% {
+        left: 5px;
+    }
+
+    100% {
+        left: 30px
+    }
+}
+
+.custom--card-content {
+    position: absolute;
+    right: -15px;
+    top: -18px;
+}
+
+.card-text {
+    word-break: break-word;
 }
