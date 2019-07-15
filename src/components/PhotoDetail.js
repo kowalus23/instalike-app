@@ -19,7 +19,7 @@ const PhotoDetail = (props) => {
         </div>
       </div>
       <div className="col-12 col-md-4 pr-sm-0 pr-3">
-        <Comments addComment={props.addComment} comments={comments} id={id}/>
+        <Comments startAddingComment={props.startAddingComment} comments={comments} id={id}/>
       </div>
     </div>
   )

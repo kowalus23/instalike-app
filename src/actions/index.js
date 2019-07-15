@@ -1,12 +1,15 @@
 import {database} from "../database/config";
 
-export const startAddingPost = (post) => dispatch => {
-  database.ref('posts').update({[post.id]: post}).then(() => {
-    dispatch(addPost(post));
+export const startAddingPost = (post) => async dispatch => {
+  await database.ref('posts').update({[post.id]: post});
+
+  dispatch({
+    type: 'ADD_POST',
+    payload: post
   });
 };
 
-export const startLoadingPost = () => dispatch => {
+export const startLoadingPosts = () => dispatch => {
   database.ref('posts').once('value').then((snapshot) => {
     let posts = [];
     snapshot.forEach((childSnapshot) => {
@@ -16,34 +19,47 @@ export const startLoadingPost = () => dispatch => {
   })
 };
 
-export const removePost = (posts) => {
-  return {
+export const startRemovingPost = (index, id) => async dispatch => {
+  await database.ref(`posts/${id}`).remove();
+
+  dispatch({
     type: 'REMOVE_POST',
-    payload: posts
-  }
+    payload: index
+  })
 };
 
-export const addPost = (post) => {
-  return {
-    type: 'ADD_POST',
-    payload: post
+export const startAddingComment = (comment, postId) => async dispatch => {
+  await database.ref(`comments/${postId}`).push(comment);
 
-  };
-};
-
-export const addComment = (comment, postId) => {
-  return {
+  dispatch({
     type: 'ADD_COMMENT',
     payload: {
       comment,
       postId
     }
-  };
+  })
+};
+
+export const startLoadingComments = () => dispatch => {
+  database.ref('comments').once('value').then((snapshot) => {
+    let comments = {};
+    snapshot.forEach((childSnapshot) => {
+      comments[childSnapshot.key] = Object.values(childSnapshot.val())
+    });
+    dispatch(loadComments(comments))
+  })
 };
 
 export const loadPosts = (postReducer) => {
   return {
     type: 'LOAD_POSTS',
     payload: postReducer
+  }
+};
+
+export const loadComments = (commentReducer) => {
+  return {
+    type: 'LOAD_COMMENTS',
+    payload: commentReducer
   }
 };

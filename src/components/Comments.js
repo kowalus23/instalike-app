@@ -5,8 +5,7 @@ const Comments = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const comment = event.target.elements.comment.value;
-    props.addComment(comment, props.id);
-
+    props.startAddingComment(comment, props.id);
     event.target.elements.comment.value = '';
   };
 

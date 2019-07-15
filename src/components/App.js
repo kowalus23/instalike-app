@@ -6,11 +6,18 @@ import Title from "./Title";
 import PhotoList from "./PhotoList";
 import PhotoCreate from "./PhotoCreate";
 import PhotoDetail from "./PhotoDetail";
-import {removePost, addPost, addComment, startAddingPost, startLoadingPost} from "../actions";
+import {
+  startAddingComment,
+  startAddingPost,
+  startLoadingPosts,
+  startRemovingPost,
+  startLoadingComments
+} from "../actions";
 
 class App extends React.Component {
   componentDidMount() {
-    this.props.startLoadingPost()
+    this.props.startLoadingPosts();
+    this.props.startLoadingComments();
   }
 
   render() {
@@ -40,4 +47,11 @@ const mapStateToProps = state => {
   return {posts: state.posts, comments: state.comments}
 };
 
-export default connect(mapStateToProps, {removePost, addPost, addComment, startAddingPost, startLoadingPost})(App);
+export default connect(mapStateToProps,
+  {
+    startAddingComment,
+    startAddingPost,
+    startLoadingPosts,
+    startRemovingPost,
+    startLoadingComments,
+  })(App);

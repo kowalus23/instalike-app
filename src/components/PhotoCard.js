@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 
-const PhotoCard = ({post, removePost, index, comments}) => {
+const PhotoCard = ({post, removePost, index, comments, startRemovingPost}) => {
   const [hover, setHover] = useState(false);
 
   const toggleHover = () => {
@@ -11,7 +11,8 @@ const PhotoCard = ({post, removePost, index, comments}) => {
   const cardStyle = {
     hover: {
       borderColor: '#ff4d5d',
-      boxShadow: '0 0.225rem 0.35rem rgba(255, 0, 0, 0.175)'
+      boxShadow: '0 0.225rem 0.35rem rgba(255, 0, 0, 0.175)',
+      color: '#ff4d5d',
     }
   };
 
@@ -38,7 +39,7 @@ const PhotoCard = ({post, removePost, index, comments}) => {
           onMouseEnter={toggleHover}
           onMouseLeave={toggleHover}
           onClick={() => {
-            removePost(index)
+            startRemovingPost(index, post.id)
           }}
           className="btn btn-outline-danger">
           X

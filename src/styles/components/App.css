@@ -58,6 +58,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .card.custom:hover .btn.btn-outline-danger {
@@ -88,6 +89,7 @@
 .btn.custom:hover {
     box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, .375);
     border-radius: 10px;
+    animation: none;
 }
 
 .btn.custom:active {
@@ -168,8 +170,27 @@ textarea {
     position: absolute;
     right: -15px;
     top: -18px;
+    color: inherit;
 }
 
 .card-text {
     word-break: break-word;
+}
+
+.loader {
+    border: 16px solid #d8d8d8;
+    border-top: 16px solid #636567;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
