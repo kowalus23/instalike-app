@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/instalike-app/static/css/main.e67d0a55.chunk.css",
+    "main.js": "/instalike-app/static/js/main.17d980f2.chunk.js",
+    "main.js.map": "/instalike-app/static/js/main.17d980f2.chunk.js.map",
+    "runtime~main.js": "/instalike-app/static/js/runtime~main.f0dcc1e2.js",
+    "runtime~main.js.map": "/instalike-app/static/js/runtime~main.f0dcc1e2.js.map",
+    "static/js/2.253b1a65.chunk.js": "/instalike-app/static/js/2.253b1a65.chunk.js",
+    "static/js/2.253b1a65.chunk.js.map": "/instalike-app/static/js/2.253b1a65.chunk.js.map",
+    "index.html": "/instalike-app/index.html",
+    "precache-manifest.a88330a6ee73ebde7313bddcf97d9aec.js": "/instalike-app/precache-manifest.a88330a6ee73ebde7313bddcf97d9aec.js",
+    "service-worker.js": "/instalike-app/service-worker.js",
+    "static/css/main.e67d0a55.chunk.css.map": "/instalike-app/static/css/main.e67d0a55.chunk.css.map"
+  }
+}
