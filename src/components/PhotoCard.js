@@ -30,7 +30,7 @@ const PhotoCard = ({post, removePost, index, comments, startRemovingPost}) => {
       </div>
       <div className="card-body">
         <div className="d-flex justify-content-between position-relative">
-          <p className="card-text mb-0">{post.description}</p>
+          <p className="card-text --list mb-0 pr-3">{post.description}</p>
           <Link className="custom--card-content" to={`photo/${post.id}`}>
               <i className="far fa-comment"/> <span>{comments[post.id] ? comments[post.id].length + 2  : 2}</span>
           </Link>

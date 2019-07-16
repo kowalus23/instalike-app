@@ -23,7 +23,11 @@ export const startLoadingPosts = () => async dispatch => {
 };
 
 export const startRemovingPost = (index, id) => async dispatch => {
-  await database.ref(`posts/${id}`).remove();
+  const updates = {
+    [`posts/${id}`]: null,
+    [`comments/${id}`]: null
+  };
+  await database.ref().update(updates);
 
   dispatch({
     type: 'REMOVE_POST',
