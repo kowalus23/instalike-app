@@ -1,7 +1,7 @@
 import * as firebase from 'firebase';
 
 var firebaseConfig = {
-  apiKey: "AIzaSyBXKdfFiZ0NClYnM6y-xmuyGSHKdrV784o",
+  apiKey: "YOUR_API_KEY",
   authDomain: "delaygram-e8b7e.firebaseapp.com",
   databaseURL: "https://delaygram-e8b7e.firebaseio.com",
   projectId: "delaygram-e8b7e",
