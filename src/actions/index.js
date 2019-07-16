@@ -15,7 +15,10 @@ export const startLoadingPosts = () => async dispatch => {
     snapshot.forEach((childSnapshot) => {
       posts.push(childSnapshot.val())
     });
-    dispatch(loadPosts(posts))
+    dispatch({
+      type: 'LOAD_POSTS',
+      payload: posts
+    })
   })
 };
 
@@ -46,20 +49,9 @@ export const startLoadingComments = () => async dispatch => {
     snapshot.forEach((childSnapshot) => {
       comments[childSnapshot.key] = Object.values(childSnapshot.val())
     });
-    dispatch(loadComments(comments))
+    dispatch({
+      type: 'LOAD_COMMENTS',
+      payload: comments
+    })
   })
-};
-
-export const loadPosts = (postReducer) => {
-  return {
-    type: 'LOAD_POSTS',
-    payload: postReducer
-  }
-};
-
-export const loadComments = (commentReducer) => {
-  return {
-    type: 'LOAD_COMMENTS',
-    payload: commentReducer
-  }
 };

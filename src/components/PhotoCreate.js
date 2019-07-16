@@ -2,7 +2,10 @@ import React from 'react';
 import history from '../history'
 
 class PhotoCreate extends React.Component {
-  state = {image: 'https://via.placeholder.com/500x350', text: 'Finally holidays, beautiful views...'};
+  state = {
+    image: 'https://via.placeholder.com/500x350',
+    text: 'Finally holidays, beautiful views...'
+  };
 
   onSubmit = (event) => {
     event.preventDefault();
@@ -65,9 +68,6 @@ class PhotoCreate extends React.Component {
             Preview
           </button>
         </form>
-        <div className="row justify-content-center mt-3">
-
-        </div>
         <div className="collapse" id="preview">
           <div className="row justify-content-center mt-3">
             <div className="col-12 col-md-8">

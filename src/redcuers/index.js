@@ -3,10 +3,10 @@ import {combineReducers} from 'redux';
 const commentReducer = (state = {}, action) => {
   switch (action.type) {
     case 'ADD_COMMENT ':
-      if (!state[action.payload.postId]) {
-        return {...state, [action.payload.postId]: [action.payload.comments]};
+      if (state[action.payload.postId]) {
+        return {...state, [action.payload.postId]: [action.payload.comment]};
       } else {
-        return {...state, [action.payload.postId]: [action.payload.comments, ...state[action.payload.postId]]}
+        return {...state, [action.payload.postId]: [...state[action.payload.postId],action.payload.comment]}
       }
     case 'LOAD_COMMENTS':
       return action.payload;
