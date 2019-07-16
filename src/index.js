@@ -8,7 +8,6 @@ import reducers from './redcuers'
 import {Provider} from "react-redux";
 import history from './history';
 import thunk from 'redux-thunk'
-import {database} from './database/config'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)));
