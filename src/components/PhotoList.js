@@ -6,13 +6,10 @@ const PhotoList = (props) => {
   if (props.posts.length === 0) {
     return (
       <div>
-        <div className="d-flex justify-content-center my-3">
+        <div className="d-flex justify-content-center my-3 position-relative">
           <Link className="btn btn-dark custom" to={'create'}>+</Link>
+          <div className="loader-list"/>
         </div>
-        <div className="d-flex justify-content-center align-items-center h-100">
-          <div className="loader"/>
-        </div>
-        <h3 className="text-center">Couldn't find any posts</h3>
       </div>
     )
   }

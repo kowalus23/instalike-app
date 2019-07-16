@@ -12,7 +12,7 @@ const PhotoDetail = (props) => {
   if (props.loading === true) {
     return (
       <div className="d-flex justify-content-center align-items-center h-100">
-        <div className="loader"/>
+        <div className="loader-post"/>
       </div>
     )
   }
