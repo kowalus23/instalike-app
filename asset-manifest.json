@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.259b02f5.chunk.css",
-    "main.js": "/static/js/main.14f31d37.chunk.js",
-    "main.js.map": "/static/js/main.14f31d37.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.5f63395e.chunk.js": "/static/js/2.5f63395e.chunk.js",
-    "static/js/2.5f63395e.chunk.js.map": "/static/js/2.5f63395e.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.11df7219495ed97c18681b8cbb560c2b.js": "/precache-manifest.11df7219495ed97c18681b8cbb560c2b.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.259b02f5.chunk.css.map": "/static/css/main.259b02f5.chunk.css.map"
+    "main.css": "/instalike-app/static/css/main.259b02f5.chunk.css",
+    "main.js": "/instalike-app/static/js/main.14f31d37.chunk.js",
+    "main.js.map": "/instalike-app/static/js/main.14f31d37.chunk.js.map",
+    "runtime~main.js": "/instalike-app/static/js/runtime~main.f0dcc1e2.js",
+    "runtime~main.js.map": "/instalike-app/static/js/runtime~main.f0dcc1e2.js.map",
+    "static/js/2.43e240b8.chunk.js": "/instalike-app/static/js/2.43e240b8.chunk.js",
+    "static/js/2.43e240b8.chunk.js.map": "/instalike-app/static/js/2.43e240b8.chunk.js.map",
+    "index.html": "/instalike-app/index.html",
+    "precache-manifest.a09a2a4e03ad781f472c29f86a695a3f.js": "/instalike-app/precache-manifest.a09a2a4e03ad781f472c29f86a695a3f.js",
+    "service-worker.js": "/instalike-app/service-worker.js",
+    "static/css/main.259b02f5.chunk.css.map": "/instalike-app/static/css/main.259b02f5.chunk.css.map"
   }
 }
