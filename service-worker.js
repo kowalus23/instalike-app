@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/instalike-app/precache-manifest.def896d52d55d2b04ced686642431ea9.js"
+  "/instalike-app/precache-manifest.7eb6f807e0444aed347e829cbaa51f23.js"
 );
 
 self.addEventListener('message', (event) => {
