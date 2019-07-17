@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/instalike-app/static/css/main.259b02f5.chunk.css",
-    "main.js": "/instalike-app/static/js/main.ddeb1be7.chunk.js",
-    "main.js.map": "/instalike-app/static/js/main.ddeb1be7.chunk.js.map",
+    "main.js": "/instalike-app/static/js/main.0aed545f.chunk.js",
+    "main.js.map": "/instalike-app/static/js/main.0aed545f.chunk.js.map",
     "runtime~main.js": "/instalike-app/static/js/runtime~main.f0dcc1e2.js",
     "runtime~main.js.map": "/instalike-app/static/js/runtime~main.f0dcc1e2.js.map",
     "static/js/2.ebd1cc83.chunk.js": "/instalike-app/static/js/2.ebd1cc83.chunk.js",
     "static/js/2.ebd1cc83.chunk.js.map": "/instalike-app/static/js/2.ebd1cc83.chunk.js.map",
     "index.html": "/instalike-app/index.html",
-    "precache-manifest.993f29fb673dd2174b272e37c36aea5d.js": "/instalike-app/precache-manifest.993f29fb673dd2174b272e37c36aea5d.js",
+    "precache-manifest.cdc52da846cffcd0f4c654c3c803bd59.js": "/instalike-app/precache-manifest.cdc52da846cffcd0f4c654c3c803bd59.js",
     "service-worker.js": "/instalike-app/service-worker.js",
     "static/css/main.259b02f5.chunk.css.map": "/instalike-app/static/css/main.259b02f5.chunk.css.map"
   }
