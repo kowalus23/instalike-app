@@ -1,5 +1,4 @@
 import React from 'react';
-import history from '../history'
 
 class PhotoCreate extends React.Component {
   state = {
@@ -20,7 +19,8 @@ class PhotoCreate extends React.Component {
 
     if (description && imageLink) {
       this.props.startAddingPost(post);
-      history.push('/')
+
+      this.props.onHistory.push('/')
     }
   };
 

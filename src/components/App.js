@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import {connect} from "react-redux";
 import '../styles/components/App.css'
 import Title from "./Title";
@@ -28,19 +28,21 @@ class App extends React.Component {
     return (
       <div className="container">
         <Title title="Delaygram"/>
-        <Route path={'/'} exact render={() => (
-          <React.Fragment>
-            <PhotoList {...this.props}/>
-          </React.Fragment>
-        )}/>
-        <Route path={'/create/'} exact render={() => (
-          <PhotoCreate {...this.props} />
-        )}/>
-        <Route path={'/photo/:id'} exact render={(params) => (
-          <React.Fragment>
-            <PhotoDetail loading={this.state.loading} {...this.props} {...params}/>
-          </React.Fragment>
-        )}/>
+        <Switch>
+          <Route path={'/'} exact render={() => (
+            <React.Fragment>
+              <PhotoList {...this.props}/>
+            </React.Fragment>
+          )}/>
+          <Route path={'/create/'} exact render={({history}) => (
+            <PhotoCreate {...this.props} onHistory={history} />
+          )}/>
+          <Route path={'/photo/:id'} exact render={(params) => (
+            <React.Fragment>
+              <PhotoDetail loading={this.state.loading} {...this.props} {...params}/>
+            </React.Fragment>
+          )}/>
+        </Switch>
       </div>
     );
   }
