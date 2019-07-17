@@ -1,7 +1,9 @@
-Finnaly Complete! :)
+Finnaly Complete! :)<br>
+https://kowalus23.github.io/instalike-app/
 
 It's simple project, based on Firebase DB, my inspiration was Instagram. But my app is less complicated. In the future i'm planning to add some more future like:
 
+- Modal for question if you want to delete post
 - Google authorization: (Individual posts)
 - Date for comments (with switch to let you know NOW/TODAY/YESTERDAY/MONTH AGO/YEAR AGO)
 - Option to make a post open for comments or just for logged in users
