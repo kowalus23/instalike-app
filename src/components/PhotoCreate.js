@@ -10,16 +10,16 @@ class PhotoCreate extends React.Component {
     event.preventDefault();
     const imageLink = event.target.elements.link.value;
     const description = event.target.elements.description.value;
+
     const post = {
       imageLink,
       description,
-      // temporary hardcoded ID
-      id: Number(new Date())
+      // TODO: change hardcoded to normal type of ID
+      id: Number(new Date()),
     };
 
     if (description && imageLink) {
       this.props.startAddingPost(post);
-
       this.props.onHistory.push('/')
     }
   };
@@ -63,8 +63,13 @@ class PhotoCreate extends React.Component {
             />
           </div>
           <button className="btn btn-dark w-100 mt-2 py-2">Create</button>
-          <button className="btn btn-outline-secondary w-100 mt-4" type="button" data-toggle="collapse" data-target="#preview"
-                  aria-expanded="false">
+          <button
+            className="btn btn-outline-secondary w-100 mt-4"
+            type="button"
+            data-toggle="collapse"
+            data-target="#preview"
+            aria-expanded="false"
+            value="Preview">
             Preview
           </button>
         </form>

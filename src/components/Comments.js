@@ -6,6 +6,15 @@ const Comments = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const comment = event.target.elements.comment.value;
+
+    // const date = () => {
+    //   let today = new Date();
+    //   const day = String(today.getDate()).padStart(2, '0');
+    //   const month = String(today.getMonth() + 1).padStart(2, '0');
+    //   const year = String(today.getFullYear());
+    //   return `${year}-${month}-${day}`
+    // };
+
     props.startAddingComment(comment, props.id);
     event.target.elements.comment.value = '';
   };
