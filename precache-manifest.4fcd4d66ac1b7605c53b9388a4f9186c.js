@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f419848b7bab5a15f2ea8287f915bba4",
+    "revision": "94475c5e2c5d128e8ab82dbc5993ab0d",
     "url": "/instalike-app/index.html"
   },
   {
-    "revision": "dd2cdcf6ae453fae2ea1",
+    "revision": "15750cf2947411046161",
     "url": "/instalike-app/static/css/main.259b02f5.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/instalike-app/static/js/2.43e240b8.chunk.js"
   },
   {
-    "revision": "dd2cdcf6ae453fae2ea1",
-    "url": "/instalike-app/static/js/main.14f31d37.chunk.js"
+    "revision": "15750cf2947411046161",
+    "url": "/instalike-app/static/js/main.fa865fcc.chunk.js"
   },
   {
     "revision": "c6fc5de04270f8324582",
