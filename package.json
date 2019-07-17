@@ -2,7 +2,7 @@
   "name": "instagram-like-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://kowalus23.github.io/instalike-app",
+  "homepage": "http://kowalus23.github.io/",
   "dependencies": {
     "firebase": "^6.3.0",
     "react": "^16.8.6",
