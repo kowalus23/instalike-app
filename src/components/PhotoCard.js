@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 
+export const imagePlaceholder = 'http://www.stuartsteel.com/wp-content/themes/asenka/images/default-no-image.png';
+
 const PhotoCard = ({post, removePost, index, comments, startRemovingPost}) => {
   const [hover, setHover] = useState(false);
 
@@ -16,7 +18,6 @@ const PhotoCard = ({post, removePost, index, comments, startRemovingPost}) => {
     }
   };
 
-  const imagePlaceholder = 'http://www.stuartsteel.com/wp-content/themes/asenka/images/default-no-image.png';
 
   return (
     <div className="card custom mx-3 mb-4" style={hover ? cardStyle.hover : null}>

@@ -44,7 +44,7 @@
 }
 
 .list-group.custom--comments {
-    max-height: calc(100vh - 438px);
+    max-height: calc(700px - (98px));
     overflow-y: auto;
 }
 

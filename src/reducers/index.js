@@ -7,7 +7,7 @@ const comments = (state = {}, action) => {
       if (!state[action.payload.postId]) {
         return {...state, [action.payload.postId]: [action.payload.comment]}
       } else {
-        return {...state, [action.payload.postId]: [...state[action.payload.postId], action.payload.comment]}
+        return {...state, [action.payload.postId]: [action.payload.comment, ...state[action.payload.postId]]}
       }
     case LOAD_COMMENTS:
       return action.payload;

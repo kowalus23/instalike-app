@@ -1,6 +1,7 @@
 import React from 'react';
 import Comments from "./Comments";
 import {Link} from "react-router-dom";
+import {imagePlaceholder} from './PhotoCard'
 
 
 const PhotoDetail = (props) => {
@@ -25,9 +26,11 @@ const PhotoDetail = (props) => {
         <React.Fragment>
           <Link className="return-button btn btn-primary" to={'/'}><i className="fas fa-arrow-left "/></Link>
           <div className="row mt-3">
-            <div className="col-12 col-md-8 px-0">
+            <div className="col-12 col-md-8 px-sm-0 px-3">
               <div className="card mb-3">
-                <img className="card-img-top custom--comments border-bottom" src={post.imageLink} alt="ownPicture"/>
+                <img className="card-img-top custom--comments border-bottom"
+                     src={post.imageLink.indexOf('http') ? imagePlaceholder : post.imageLink}
+                     alt="ownPicture"/>
                 <div className="card-body">
                   <p className="card-text">{post.description}</p>
                 </div>

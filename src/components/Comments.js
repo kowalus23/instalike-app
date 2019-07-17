@@ -1,12 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const Comments = (props) => {
+  const [enable, setEnable] = useState(true);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const comment = event.target.elements.comment.value;
     props.startAddingComment(comment, props.id);
     event.target.elements.comment.value = '';
+  };
+
+  const buttonEnable = (event) => {
+    if (event.target.value.length > 0) {
+       setEnable(false)
+    } else {
+      setEnable(!enable)
+    }
   };
 
   const renderComment = () => {
@@ -26,8 +35,8 @@ const Comments = (props) => {
     <div className="mb-3">
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <textarea className="form-control custom--comments__area" name="comment" rows="4" placeholder="Write, a comment..."/>
-          <input className="btn btn-primary w-100 custom--comments__submit" value="Add comment" type="submit"/>
+          <textarea onChange={buttonEnable} className="form-control custom--comments__area" name="comment" rows="4" placeholder="Write, a comment..."/>
+          <input className="btn btn-primary w-100 custom--comments__submit" value="Add comment" type="submit" disabled={enable}/>
         </div>
       </form>
       <ul className="list-group custom--comments border rounded">
