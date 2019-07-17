@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 
-export const imagePlaceholder = 'http://www.stuartsteel.com/wp-content/themes/asenka/images/default-no-image.png';
+export const imagePlaceholder = 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png';
 
 const PhotoCard = ({post, removePost, index, comments, startRemovingPost}) => {
   const [hover, setHover] = useState(false);
