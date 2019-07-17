@@ -39,7 +39,7 @@ const PhotoCard = ({post, removePost, index, comments, startRemovingPost}) => {
           <button
             onMouseEnter={toggleHover}
             onMouseLeave={toggleHover}
-            onClick={() => {
+            onClick={() => { if (window.confirm('Are you sure that you want to permanent delete this post?'))
               startRemovingPost(index, post.id)
             }}
             className="btn btn-outline-danger">
