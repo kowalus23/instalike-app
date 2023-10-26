@@ -9,6 +9,7 @@ It's simple project, based on Firebase DB, my inspiration was Instagram. But my 
 - Option to make a post open for comments or just for logged in users
 - Name for comments (annonymous vs user.name)
 - Paginations.... and more
+- 
 
 ## Available Scripts
 
